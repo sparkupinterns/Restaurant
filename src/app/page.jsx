@@ -50,7 +50,10 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <button className="bg-red-700 text-white font-sans  px-6 py-3 rounded-lg hover:bg-red-500 transition w-[200px]">
+                      <button
+                        className="text-white font-sans px-6 py-3 rounded-lg hover:bg-red-500 transition w-[200px]"
+                        style={{ backgroundColor: "#CC3333" }}
+                      >
                         Try it Now
                       </button>
                     </div>
@@ -71,12 +74,21 @@ export default function Page() {
 
         <section className="bg-gray-100 h-[436px] w-full text-black items-center justify-center flex flex-col p-4">
           <div className="my-5 p-5">
-            <h3 className="text-4xl font-[var(--font-caveat)] text-center" style={{ color: "#CC3333" }}>
+            <h3
+              className="text-5xl font-black text-center"
+              style={{ color: '#CC3333', fontFamily: 'Caveat, cursive' }}
+            >
               Online Booking
             </h3>{" "}
-            <h1 className="text-5xl gap-4 font-extrabold font-sans tracking-wide " style={{ color: "#2a435d" }}>
+            <h1
+              className="text-5xl gap-4 font-extrabold font-sans tracking-wide "
+              style={{ color: "#2a435d" }}
+            >
               Table{" "}
-              <span className="text-5xl font-extrabold font-sans" style={{ color: "#CC3333" }}>
+              <span
+                className="text-5xl font-extrabold font-sans"
+                style={{ color: "#CC3333" }}
+              >
                 Booking
               </span>
             </h1>
@@ -111,7 +123,10 @@ export default function Page() {
             </div>
 
             <div className="items-center">
-              <button className="text-white font-sans px-6 py-4 hover:bg-red-500 transition w-[200px]" style={{ backgroundColor: "#CC3333" }}>
+              <button
+                className="text-white font-sans px-6 py-4 hover:bg-red-500 transition w-[200px]"
+                style={{ backgroundColor: "#CC3333" }}
+              >
                 Find Table
               </button>
             </div>
@@ -198,25 +213,305 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-gray-100 w-full text-black flex justify-center p-4 h-[1316px] p-4">
-          <div>
+        <section className="bg-gray-100 w-full text-black flex justify-center p-4 h-[1316px]">
+          <div className="w-full max-w-[1320px]">
             {/* First */}
-            <div className="m-5 py-20 w-full">
-              <h3 className="text-4xl font-[var(--font-caveat)] text-center" style={{ color: "#CC3333" }}>
+            <div className="m-5 py-10 w-full text-center">
+              <h3
+                className="text-5xl font-black"
+                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive;" }}
+              >
                 Food Items
-              </h3>{" "}
-              <h1 className="text-5xl gap-4 font-extrabold font-sans tracking-wide" style={{ color: "#2a435d" }}>
-                Popular{" "}
-                <span className="text-5xl font-extrabold font-sans" style={{ color: "#CC3333" }}>
-                  Menu
-                </span>
+              </h3>
+              <h1
+                className="text-5xl font-extrabold font-sans tracking-wide mt-2"
+                style={{ color: "#2a435d" }}
+              >
+                Popular <span style={{ color: "#CC3333" }}>Menu</span>
               </h1>
             </div>
-            {/* Second */}
-              
-            {/* Third */}
-          </div>
 
+            {/* Grid Section */}
+            <div className="grid grid-cols-6 gap-4 p-6 m-auto">
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                <div className="">
+                  <img
+                    src="/images/home/pizza2.png"
+                    alt="Image"
+                    className="p-2 w-[120px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Pizza</h1>
+                </div>
+              </div>
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                {" "}
+                <div className="">
+                  <img
+                    src="/images/home/burger.png"
+                    alt="Image"
+                    className="p-2 w-[100px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Burger</h1>
+                </div>
+              </div>
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                {" "}
+                <div className="">
+                  <img
+                    src="/images/home/chicken.png"
+                    alt="Image"
+                    className="p-2 w-[100px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Chicken</h1>
+                </div>
+              </div>
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                {" "}
+                <div className="">
+                  <img
+                    src="/images/home/drinks.png"
+                    alt="Image"
+                    className="p-2 w-[100px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Drinks</h1>
+                </div>
+              </div>
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                {" "}
+                <div className="">
+                  <img
+                    src="/images/home/drinks2.png"
+                    alt="Image"
+                    className="p-2 w-[85px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Drinks</h1>
+                </div>
+              </div>
+              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+                {" "}
+                <div className="">
+                  <img
+                    src="/images/home/combo.png"
+                    alt="Image"
+                    className="p-2 w-[120px]"
+                  />
+                  <h1 style={{ color: "#2a435d" }}>Combo Menu</h1>
+                </div>
+              </div>
+            </div>
+
+            {/* Menu Section */}
+            <div className="h-[600px] w-[1250px] m-auto my-10 shadow-xl rounded-sm flex flex-col items-center justify-center">
+              <div className="grid grid-cols-3 gap-12 p-4">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz1.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Margherita
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz2.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px]object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Tomato
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz3.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Marinara
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz4.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Frutti Di Mare
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz5.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Americana
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                  <img
+                    src="/images/home/piz6.png"
+                    alt="Tomato"
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="pl-8 text-xl">
+                    <h2 className="text-2xl font-bold text-[#2a435d] py-2">
+                      Pizza Al Pesto
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Shrimp, Squid, Pineapple
+                    </p>
+                    <p className="text-[#2a435d] font-semibold mt-1 py-2">
+                      Price: $15.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Button */}
+              <div>
+                <button
+                  className="text-white text-xl font-bold font-sans px-6 py-3 rounded-lg hover:bg-red-500 transition w-[180px] mt-10"
+                  style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="w-full text-black flex p-4 h-[1234px]"
+          style={{ backgroundImage: "linear-gradient(#fffbf1, #fff)" }}
+        >
+          {/* main */}
+          <div>
+            {/* First */}
+
+            <div className="flex flex-row gap-80 items-center px-15">
+              {/* Left Side */}
+              <div className="max-w-full m-5 py-10 w-full">
+                <h3
+                  className="text-5xl font-black"
+                  style={{ color: '#CC3333', fontFamily: 'Caveat, cursive' }}
+                >
+                  Food Items
+                </h3>
+                <h1
+                  className="text-5xl font-extrabold font-sans tracking-wide mt-2"
+                  style={{ color: "#2a435d" }}
+                >
+                  Popular <span style={{ color: "#CC3333" }}>Menu</span>
+                </h1>
+              </div>
+
+              {/* Right Side */}
+              <div className="w-[580px]">
+                <ul className="flex flex-row items-center justify-between gap-18 p-2">
+                  <li>
+                    <a href="#">All Items</a>
+                  </li>
+                  <li>
+                    <a href="#">Pizza</a>
+                  </li>
+                  <li>
+                    <a href="#">Burger</a>
+                  </li>
+                  <li>
+                    <a href="#">Chicken</a>
+                  </li>
+                  <li>
+                    <a href="#">Drinks</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="grid grid-cols-4 gap-4 flex items-center justify-center pl-20">
+                {/* Single Item */}
+                {[
+                  { img: "/images/home/pd1.png", title: "Garlic Burger" },
+                  { img: "/images/home/pd2.png", title: "Vegetable Pizza" },
+                  { img: "/images/home/pd3.png", title: "Chicken Fry" },
+                  { img: "/images/home/pd4.png", title: "Chickpea Soup" },
+                  { img: "/images/home/pd5.png", title: "Garlic Burger" },
+                  { img: "/images/home/pd6.png", title: "Vegetable Pizza" },
+                  { img: "/images/home/pd6.png", title: "Chicken Fry" },
+                  { img: "/images/home/pd6.png", title: "Chickpea Soup" },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col bg-white items-center h-[320px] w-[280px] gap-4 border border-gray-200 rounded-lg p-4 shadow-sm"
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-[150px] h-[150px] object-contain"
+                    />
+                    <div className="pl-2">
+                      <h2 className="text-2xl font-black text-[#2a435d] py-2">
+                        {item.title}
+                      </h2>
+                      <p className="text-gray-600 text-sm py-2">
+                        It is a long established fact that a reader BBQ food
+                        Chicken.
+                      </p>
+                      <p className="text-[#2a435d] text-lg font-semibold">
+                        Price: $15.00
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </>
