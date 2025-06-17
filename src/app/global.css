@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import "tailwindcss";
+
+/* :root {
+  --primary: #c33;
+  --primary-dark: #1F5C2F;
+  --primary-light: #C2F0CD;
+}
+
+body {
+  font-family: "Onest", sans-serif;
+  background-color: #F6F6F6;
+}
+
+.c-text-hover {
+  transition: color 0.3s ease;
+}
+
+.c-text-hover:hover {
+  color: var(--primary);
+}
+
+.testi-bg {
+  background-image: url('/images/map-bg.png');
+  background-size: cover;
+} */
