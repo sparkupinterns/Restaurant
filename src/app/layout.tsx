@@ -3,8 +3,6 @@ import { Caveat, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,11 +13,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const caveat = Caveat({
-  variable: "--font-caveat",
-  subsets: ["latin"],
-  weight: ["400", "700"], 
-});
-
+  subsets: ['latin'],
+  variable: '--font-caveat',
+})
 
 export const metadata: Metadata = {
   title: "Khadyo - Restaurant",
@@ -33,10 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+          <html lang="en" className={caveat.variable}/>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
