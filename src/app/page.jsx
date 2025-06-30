@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Testimonial from "../components/Testimonial";
 
 export default function Page() {
   return (
@@ -76,7 +77,7 @@ export default function Page() {
           <div className="my-5 p-5">
             <h3
               className="text-5xl font-black text-center"
-              style={{ color: '#CC3333', fontFamily: 'Caveat, cursive' }}
+              style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
             >
               Online Booking
             </h3>{" "}
@@ -219,7 +220,7 @@ export default function Page() {
             <div className="m-5 py-10 w-full text-center">
               <h3
                 className="text-5xl font-black"
-                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive;" }}
+                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
               >
                 Food Items
               </h3>
@@ -427,7 +428,7 @@ export default function Page() {
         </section>
 
         <section
-          className="w-full text-black flex p-4 h-[1234px]"
+          className="w-full text-black flex px-4 h-[900px]"
           style={{ backgroundImage: "linear-gradient(#fffbf1, #fff)" }}
         >
           {/* main */}
@@ -439,7 +440,7 @@ export default function Page() {
               <div className="max-w-full m-5 py-10 w-full">
                 <h3
                   className="text-5xl font-black"
-                  style={{ color: '#CC3333', fontFamily: 'Caveat, cursive' }}
+                  style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
                 >
                   Food Items
                 </h3>
@@ -510,6 +511,352 @@ export default function Page() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="bg-white grid grid-cols-4 gap-8 w-full h-[790px] text-black p-30 ">
+            <div className="col-span-2 bg-black text-white h-[270px]">
+              <div className="p-4">
+                <h1 className="pt-2 text-4xl font-black">Buzzed Burger</h1>
+                <p className="text-sm pt-2">Sales off 50% only this week</p>
+                <button
+                  className="uppercase text-white text-lg font-semibold font-sans py-2 rounded-lg hover:bg-red-500 transition w-[140px] mt-10"
+                  style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+
+              <div className="relative">
+                <img
+                  src="/images/g1.png"
+                  alt="image"
+                  className="absolute right-0 bottom-[-78] h-[170px] w-[320px]"
+                />
+              </div>
+            </div>
+
+            <div className="bg-[#347433] text-white w-full relative h-[270px]">
+              <div className="absolute bottom-6 right-4 text-right">
+                <h1 className="text-2xl font-semibold">
+                  Super Delicious Pizza
+                </h1>
+                <button
+                  className="uppercase text-white text-lg font-semibold font-sans rounded-lg hover:transition "
+                  // style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+              <div>
+                <img
+                  src="/images/g2.png"
+                  alt="image"
+                  className="h-[100px] w-[150px]"
+                />
+              </div>
+            </div>
+
+            <div className="bg-red-500 row-span-2 text-white">
+              <div className="p-4">
+                <h1 className="text-2xl font-bold pt-4">Super Combo Burger</h1>
+                <button
+                  className="uppercase text-red-500 bg-white text-lg font-semibold font-sans py-2 rounded-lg hover:transition w-[140px] mt-6"
+                  // style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+              <div className="relative flex justify-end vertical-align: bottom">
+                <img
+                  src="/images/g3.png"
+                  alt="image"
+                  className="absolute right-0 top-20 h-[340px] w-[280px]"
+                />
+              </div>
+            </div>
+
+            <div className="bg-orange-400 text-white h-[270px]">
+              <div className="p-4">
+                <h1 className="text-2xl font-[700] pt-4">Super Combo Burger</h1>
+                <button
+                  className="uppercase text-[#2a435d] text-lg font-semibold font-sans rounded-lg hover:transition mt-6"
+                  // style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+              <div className="relative">
+                <img
+                  src="/images/g4.png"
+                  alt="image"
+                  className="absolute right-0 top-[-10]"
+                />
+              </div>
+            </div>
+
+            <div className="bg-[#347433] text-white w-full relative h-[270px]">
+              <div className="absolute bottom-6 right-4 text-right">
+                <h1 className="text-2xl font-semibold">
+                  Super Delicious Pizza
+                </h1>
+                <button
+                  className="uppercase text-white text-lg font-semibold font-sans rounded-lg hover:transition"
+                  // style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+              <div>
+                <img
+                  src="/images/g2.png"
+                  alt="image"
+                  className="h-[100px] w-[150px]"
+                />
+              </div>
+            </div>
+
+            <div className="bg-orange-400 text-white h-[270px]">
+              <div className="p-4">
+                <h1 className="text-2xl font-[700] pt-4">Super Combo Burger</h1>
+                <button
+                  className="uppercase text-[#2a435d] text-lg font-semibold font-sans rounded-lg hover:transition mt-6"
+                  // style={{ backgroundColor: "#CC3333" }}
+                >
+                  Order Now
+                </button>
+              </div>
+              <div className="relative">
+                <img
+                  src="/images/g4.png"
+                  alt="image"
+                  className="absolute right-0 top-[-10]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-black h-[850px]">
+          <div className="flex flex-row itemes-center ">
+            <div className="flex items-center justify-center mt-8 ml-8">
+              <img
+                src="/images/home/21.png"
+                alt="Image"
+                className=" h-210 w-210"
+              />
+            </div>
+
+            <div className="flex flex-col pl-8 justify-center">
+              <h3
+                className="text-5xl font-black pb-5"
+                style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
+              >
+                Coming Soon
+              </h3>
+              <h1 className="text-5xl font-black items-center leading-normal">
+                SPICY CHICKEN <br />
+                PIZZA
+                <span className="pl-5 text-yellow-500">FOOD</span>
+              </h1>
+              <p className="py-8">Feel Hunger! Order Your Favourite Food.</p>
+              <button className="bg-red-700 text-white text-xl font-medium rounded-lg p-3">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="bg-white text-black h-[600px] w-full">
+          <div>
+            <div className="text-center w-full p-5">
+              <h3
+                className="text-3xl font-black"
+                style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
+              >
+                Testimonials
+              </h3>{" "}
+              <h1
+                className="text-5xl gap-4 font-black font-sans tracking-wide "
+                style={{ color: "#2a435d" }}
+              >
+                Client{" "}
+                <span
+                  className="text-5xl font-extrabold font-sans"
+                  style={{ color: "#CC3333" }}
+                >
+                  Feedback
+                </span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 flex items-center">
+            {[
+              {
+                img: "/images/home/testi1.png",
+                name: "Christ Deo",
+                title: "CEO A4 Tech",
+                p: `
+            Food Khan is a gret Restaurant from the University of Texas at
+            Austin has been researching the benefits of frequent testing and
+            the feedback leads to. He explains that in the history of the
+            study.
+          `,
+              },
+              {
+                img: "/images/home/testi1.png",
+                name: "James Van",
+                title: "CEO Soft Tech",
+                p: `
+            Food Khan is a gret Restaurant from the University of Texas at
+            Austin has been researching the benefits of frequent testing and
+            the feedback leads to. He explains that in the history of the
+            study.
+          `,
+              },
+            ].map((p, index) => (
+              <div className="h-[270px] w-[80%] items-center justify-center m-auto rounded-lg shadow-sm px-10">
+                <div
+                  key={index}
+                  className="flex flex-row bg-white item-center gap-4 pt-4"
+                >
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="w-[100px] h-[100px] object-contain"
+                  />
+                  <div className="flex flex-col gap-2">
+                    <h2>{p.name}</h2>
+                    <h4>{p.title}</h4>
+                  </div>
+                </div>
+                <div>
+                  <p className="pt-6">{p.p}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section> */}
+
+        <section className="bg-white text-black h-[600px] w-full">
+          <div className="text-center w-full p-5">
+              <h3
+                className="text-5xl font-black"
+                style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
+              >
+                Testimonials
+              </h3>{" "}
+              <h1
+                className="text-5xl gap-4 font-extrabold font-sans tracking-wide "
+                style={{ color: "#2a435d" }}
+              >
+                Client{" "}
+                <span
+                  className="text-5xl font-extrabold font-sans"
+                  style={{ color: "#CC3333" }}
+                >
+                  Feedback
+                </span>
+              </h1>
+            </div>
+            <div>
+              <Testimonial/>
+            </div>
+        </section>
+
+        <section className="bg-white h-[280px]">
+          <div className="flex flex-row gap-4">
+            <img src="/images/home/r1.jpg" alt="image" />
+            <img src="/images/home/r2.jpg" alt="image" />
+            <img src="/images/home/r3.jpg" alt="image" />
+            <img src="/images/home/r5.jpg" alt="image" />
+            <img src="/images/home/r4.jpg" alt="image" />
+          </div>
+        </section>
+
+        <section className="bg-[#FFF2E0] h-[690px] px-10 py-20">
+          <div className="flex flex-row gap-6 items-center">
+            <div>
+              <img src="/images/home/delivery.png" alt="image" />
+            </div>
+
+
+            <div className="w-[50%]">
+              <h3
+                className="text-5xl font-black"
+                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
+              >
+                Delivery
+              </h3>
+              <h1
+                className="text-5xl font-black font-sans tracking-wide mt-2"
+                style={{ color: "#2a435d" }}
+              >
+                A Moments of Delivered <br />{" "}
+                <span style={{ color: "#CC3333" }}>On Right Time & Place</span>
+              </h1>
+              <p className="pt-6"
+              style={{ color: "#2a435d" }}
+              >
+                Food Khan is a restaurant, bar and coffee roastery located on a
+                busy corner site in Farringdon's Exmouth Market. With glazed
+                frontage on two sides of the building, overlooking the market
+                and a bustling London inteon.
+              </p>
+               <div>
+                  <div className=" flex items-center gap-4 my-8">
+                    <img
+                      src="/images/home/scooter.png"
+                      alt="phone"
+                      className="w-20 h-20"
+                    />
+                    <div>
+                      <h3 className="text-xl font-semibold font-sans text-white "
+                      style={{ color: "#2a435d" }}  
+                      >
+                        Daily Order Num.
+                      </h3>
+                      <p className="font-bold text-3xl "
+                      style={{ color: "#CC3333" }}
+                      >
+                        123-5662546
+                      </p>
+                    </div>
+
+                    <div>
+                      <button
+                        className="ml-4 text-xl text-white font-sans py-3 rounded-lg hover:bg-red-500 transition w-[150px]"
+                        style={{ backgroundColor: "#CC3333" }}
+                      >
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+          </div>
+        </section>
+
+        <section className="bg-white h-[880px]">
+          <div>
+            <div className="py-20 w-full text-center">
+              <h3
+                className="text-4xl font-black"
+                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
+              >
+                Food Khan
+              </h3>
+              <h1
+                className="text-5xl font-black font-sans tracking-wide mt-2"
+                style={{ color: "#2a435d" }}
+              >
+                Blog & <span style={{ color: "#CC3333" }}>News</span>
+              </h1>
             </div>
           </div>
         </section>
