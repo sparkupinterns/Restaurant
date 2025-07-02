@@ -16,7 +16,6 @@ export default function Home() {
         <ul className="flex items-center gap-8 text-base font-medium">
           <li className="flex items-center gap-1">
             <Link href="/">HOME</Link>
-            <span><IoIosArrowDown /></span>
           </li>
           <li>
             <Link href="/about">ABOUT US</Link>
@@ -26,11 +25,9 @@ export default function Home() {
           </li>
           <li className="flex items-center gap-1">
             <Link href="/blog">BLOG</Link>
-            <span><IoIosArrowDown /></span>
           </li>
           <li className="flex items-center gap-1">
             <Link href="/page">PAGES</Link>
-            <span><IoIosArrowDown /></span>
           </li>
           <li>
             <Link href="/contact">CONTACT US</Link>
