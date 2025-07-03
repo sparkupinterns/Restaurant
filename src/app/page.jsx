@@ -1,7 +1,17 @@
+"use client"; 
 import Head from "next/head";
 import Testimonial from "../components/Testimonial";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 
 export default function Page() {
+  const [message, setMessage] = useState("");
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/hello")
+      .then(res => setMessage(res.data.message))
+      .catch(err => console.log(err));
+  }, []);
   return (
     <>
       <div className="">
