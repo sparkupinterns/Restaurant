@@ -2,14 +2,32 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 
 export default function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Logging in with:", email, password);
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/login", {
+        email,
+        password,
+      });
+
+      console.log("Login successful:", res.data);
+      alert("Login Successful!");
+
+      localStorage.setItem("token", res.data.token);
+
+      // Redirect to dashboard or home page
+      // router.push("/dashboard");
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Invalid credentials or server error.");
+    }
   };
 
   return (
@@ -30,10 +48,10 @@ export default function Page() {
           <input
             type="text"
             name="email"
-            placeholder="Username"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="placeholder-gray-400 border border-gray-400 w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
+            className="placeholder-gray-500 text-gray-600 border border-gray-400 w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
             required
           />
 
@@ -43,7 +61,7 @@ export default function Page() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="placeholder-gray-400 border border-gray-400 w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
+            className="placeholder-gray-500 text-gray-600 border border-gray-400 w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
             required
           />
         </div>
@@ -51,7 +69,7 @@ export default function Page() {
         <div className="flex gap-4 w-full justify-between">
           <button
             type="submit"
-              className="bg-white text-[#264ECA] text-lg w-[150px] font-bold p-3 border border-[#264ECA] cursr-pointer rounded-lg hover:bg-[#264ECA] hover:text-white transition"
+            className="bg-white text-[#264ECA] text-lg w-[150px] font-bold p-3 border border-[#264ECA] cursr-pointer rounded-lg hover:bg-[#264ECA] hover:text-white transition"
           >
             Login
           </button>

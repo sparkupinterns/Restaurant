@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa";
 import Testimonial from "../../components/Testimonial";
 import { FaCirclePlay } from "react-icons/fa6";
+import { FaTags } from "react-icons/fa6";
+import { FaUserCircle } from "react-icons/fa";
 
 
 const page = () => {
@@ -276,24 +278,107 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-white h-[880px]">
-        <div>
-          <div className="py-20 w-full text-center">
-            <h3
-              className="text-4xl font-black"
-              style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
-            >
-              Food Khan
-            </h3>
-            <h1
-              className="text-5xl font-black font-sans tracking-wide mt-2"
-              style={{ color: "#2a435d" }}
-            >
-              Blog & <span style={{ color: "#CC3333" }}>News</span>
-            </h1>
-          </div>
-        </div>
-      </section>
+      <section className="bg-white py-20 h-[800px]">
+                <div className="text-center mb-12">
+                  <h3 className="text-4xl font-black text-[#CC3333] font-[Caveat]">
+                    Food Khan
+                  </h3>
+                  <h1 className="text-5xl font-black font-sans tracking-wide mt-2 text-[#2a435d]">
+                    Blog & <span className="text-[#CC3333]">News</span>
+                  </h1>
+                </div>
+      
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-10 ">
+                  {/* Blog Card 1 */}
+                  <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+                    <img
+                      src="/images/home/b-1.jpg"
+                      alt="Burger"
+                      className="w-full h-80 rounded-xl object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+                    />
+                    <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                      <p className="text-lg font-bold">02</p>
+                      <p className="text-sm">Dec</p>
+                    </div>
+                    <div className="p-4">
+                      <div className="flex flex-row items-center gap-30 mb-2 text-[#2a435d] font-bold ">
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaTags />
+                          Chicken Burger
+                        </span>
+      
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaUserCircle />
+                          Milone Hridoy
+                        </span>
+                      </div>
+                      <h2 className="text-3xl font-black pt-4">
+                        Game Day Burger With Homemade
+                      </h2>
+                    </div>
+                  </div>
+      
+                  {/* Blog Card 2 */}
+                  <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+                    <img
+                      src="/images/home/b-2.jpg"
+                      alt="Burger"
+                      className="w-full h-80 rounded-xl cursor-pointer object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+                    />
+                    <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                      <p className="text-lg font-bold">02</p>
+                      <p className="text-sm">Dec</p>
+                    </div>
+                    <div className="p-4">
+                      <div className="flex flex-row items-center gap-50 mb-2 text-[#2a435d] font-bold ">
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaTags />
+                          Pizza
+                        </span>
+      
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaUserCircle />
+                          Milone Hridoy
+                        </span>
+                      </div>
+                      <h2 className="text-3xl font-black pt-4">
+                        Game Day Burger With Homemade
+                      </h2>
+                    </div>
+                  </div>
+      
+                  {/* Blog Card 3 */}
+                  <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+                    <img
+                      src="/images/home/b-3.jpg"
+                      alt="Burger"
+                      className="w-full h-80 rounded-xl object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+                    />
+                    <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                      <p className="text-lg font-bold">02</p>
+                      <p className="text-sm">Dec</p>
+                    </div>
+                    <div className="p-4">
+                      <div className="flex flex-row items-center gap-30 mb-2 text-[#2a435d] font-bold ">
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaTags />
+                          Chicken Burger
+                        </span>
+      
+                        <span className="flex flex-row items-center  gap-2">
+                          <FaUserCircle />
+                          Milone Hridoy
+                        </span>
+                      </div>
+                      <h2 className="text-3xl font-black pt-4">
+                        Game Day Burger With Homemade
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
     </div>
   );
 };

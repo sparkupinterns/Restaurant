@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import axios from "axios";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -9,9 +10,33 @@ export default function Page() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Registering:", name, email, number, password, confirmPassword);
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/register", {
+        name,
+        email,
+        number,
+        password,
+      });
+
+      console.log("Registered Successfully:", res.data);
+      alert("Registered Successfully!");
+      setName("");
+      setEmail("");
+      setNumber("");
+      setPassword("");
+      setConfirmPassword("");
+    } catch (error) {
+      console.error("Registration failed:", error);
+      alert("Registration failed");
+    }
   };
 
   return (
@@ -37,7 +62,7 @@ export default function Page() {
               placeholder="Enter Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="border border-gray-500 w-full p-4 rounded-lg "
+              className="border border-gray-500 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA] "
               required
             />
 
@@ -46,7 +71,7 @@ export default function Page() {
               placeholder="Enter Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border border-gray-500 w-full p-4 rounded-lg"
+              className="border border-gray-500 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
               required
             />
 
@@ -55,7 +80,7 @@ export default function Page() {
               placeholder="Enter Your Number"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
-              className="border border-gray-500 w-full p-4 rounded-lg"
+              className="border border-gray-500 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
               required
             />
 
@@ -64,7 +89,7 @@ export default function Page() {
               placeholder="Enter Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="border border-gray-500 w-full p-4 rounded-lg"
+              className="border border-gray-500 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
               required
             />
 
@@ -73,7 +98,7 @@ export default function Page() {
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="border border-gray-500 w-full p-4 rounded-lg"
+              className="border border-gray-500 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#264ECA]"
               required
             />
           </div>
@@ -89,5 +114,3 @@ export default function Page() {
     </section>
   );
 }
-
-

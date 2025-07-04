@@ -1,16 +1,18 @@
-"use client"; 
+"use client";
 import Head from "next/head";
 import Testimonial from "../components/Testimonial";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { FaTags } from "react-icons/fa6";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Page() {
   const [message, setMessage] = useState("");
   useEffect(() => {
-    axios.get("http://localhost:5000/api/hello")
-      .then(res => setMessage(res.data.message))
-      .catch(err => console.log(err));
+    axios
+      .get("http://localhost:5000/api/auth/register")
+      .then((res) => setMessage(res.data.message))
+      .catch((err) => console.log(err));
   }, []);
   return (
     <>
@@ -30,7 +32,10 @@ export default function Page() {
                   <div className="border border-dotted border-r-0 p-3 rounded-l-xl">
                     Buy One. Get One
                   </div>
-                  <div className="p-3 text-white font-semibold font-sans" style={{ backgroundColor: "#CC3333" }}>
+                  <div
+                    className="p-3 text-white font-semibold font-sans rounded-r-lg"
+                    style={{ backgroundColor: "#CC3333" }}
+                  >
                     Free
                   </div>
                 </div>
@@ -61,10 +66,7 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <button
-                        className="text-white font-sans px-6 py-3 rounded-lg hover:bg-red-500 transition w-[200px]"
-                        style={{ backgroundColor: "#CC3333" }}
-                      >
+                      <button className="text-white font-sans px-6 py-3 cursor-pointer rounded-lg [background-color:#CC3333] transition w-[200px] hover:[background-color:#990000]">
                         Try it Now
                       </button>
                     </div>
@@ -83,8 +85,9 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-gray-100 h-[436px] w-full text-black items-center justify-center flex flex-col p-4">
-          <div className="my-5 p-5">
+        <section className="bg-gray-100 h-[436px] w-full text-black p-4">
+          <div className="mt-[-50px] items-center justify-center flex flex-col rounded-lg w-[1300px] h-[400px] mx-auto bg-white">
+            <div className="my-5 mt-0 pt-0 p-5 pb-20">
             <h3
               className="text-5xl font-black text-center"
               style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
@@ -107,7 +110,7 @@ export default function Page() {
 
           <div className="flex flex-row gap-8 text-2xl">
             <div className="border p-4 w-[300px] rounded-lg flex items-center justify-center">
-              <select id="food" name="food" className="border-none w-full">
+              <select id="food" name="food" className="w-full focus:outline-none focus:ring-0 text-[#2a435d]">
                 <option value="4">4 Poeple</option>
                 <option value="3">3 Poeple</option>
                 <option value="2">2 Poeple</option>
@@ -120,12 +123,12 @@ export default function Page() {
                 type="date"
                 id="dob"
                 name="dob"
-                className="border-none w-full"
+                className="border-none w-full focus:outline-none focus:ring-0 text-[#2a435d]"
               />
             </div>
 
             <div className="border p-4 w-[300px] rounded-lg">
-              <select id="food" name="food" className="border-none w-full">
+              <select id="food" name="food" className="w-full focus:outline-none focus:ring-0 text-[#2a435d]">
                 <option value="4">07:24 PM</option>
                 <option value="3">07:24 PM</option>
                 <option value="2">07:24 PM</option>
@@ -134,13 +137,11 @@ export default function Page() {
             </div>
 
             <div className="items-center">
-              <button
-                className="text-white font-sans px-6 py-4 hover:bg-red-500 transition w-[200px]"
-                style={{ backgroundColor: "#CC3333" }}
-              >
+              <button className="text-white font-sans px-6 py-4 rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000] w-[200px]">
                 Find Table
               </button>
             </div>
+          </div>
           </div>
         </section>
 
@@ -244,17 +245,17 @@ export default function Page() {
 
             {/* Grid Section */}
             <div className="grid grid-cols-6 gap-4 p-6 m-auto">
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 <div className="">
                   <img
                     src="/images/home/pizza2.png"
                     alt="Image"
                     className="p-2 w-[120px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Pizza</h1>
+                  <h1>Pizza</h1>
                 </div>
-              </div>
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              </button>
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 {" "}
                 <div className="">
                   <img
@@ -262,10 +263,10 @@ export default function Page() {
                     alt="Image"
                     className="p-2 w-[100px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Burger</h1>
+                  <h1>Burger</h1>
                 </div>
-              </div>
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              </button>
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 {" "}
                 <div className="">
                   <img
@@ -273,10 +274,10 @@ export default function Page() {
                     alt="Image"
                     className="p-2 w-[100px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Chicken</h1>
+                  <h1>Chicken</h1>
                 </div>
-              </div>
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              </button>
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 {" "}
                 <div className="">
                   <img
@@ -284,10 +285,10 @@ export default function Page() {
                     alt="Image"
                     className="p-2 w-[100px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Drinks</h1>
+                  <h1>Drinks</h1>
                 </div>
-              </div>
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              </button>
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 {" "}
                 <div className="">
                   <img
@@ -295,10 +296,10 @@ export default function Page() {
                     alt="Image"
                     className="p-2 w-[85px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Drinks</h1>
+                  <h1>Drinks</h1>
                 </div>
-              </div>
-              <div className="w-[140px] h-[160px] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
+              </button>
+              <button className="focus:bg-[#CC3333] focus:text-white cursor-pointer w-[140px] h-[160px] text-[#2a435d] font-bold text-xl rounded-sm text-center border border-gray-300 flex items-center justify-center">
                 {" "}
                 <div className="">
                   <img
@@ -306,15 +307,14 @@ export default function Page() {
                     alt="Image"
                     className="p-2 w-[120px]"
                   />
-                  <h1 style={{ color: "#2a435d" }}>Combo Menu</h1>
+                  <h1>Combo Menu</h1>
                 </div>
-              </div>
+              </button>
             </div>
-
             {/* Menu Section */}
             <div className="h-[600px] w-[1250px] m-auto my-10 shadow-xl rounded-sm flex flex-col items-center justify-center">
               <div className="grid grid-cols-3 gap-12 p-4">
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz1.png"
                     alt="Tomato"
@@ -332,7 +332,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz2.png"
                     alt="Tomato"
@@ -350,7 +350,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz3.png"
                     alt="Tomato"
@@ -368,7 +368,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz4.png"
                     alt="Tomato"
@@ -386,7 +386,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz5.png"
                     alt="Tomato"
@@ -404,7 +404,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px]">
+                <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
                     src="/images/home/piz6.png"
                     alt="Tomato"
@@ -426,10 +426,7 @@ export default function Page() {
 
               {/* Button */}
               <div>
-                <button
-                  className="text-white text-xl font-bold font-sans px-6 py-3 rounded-lg hover:bg-red-500 transition w-[180px] mt-10"
-                  style={{ backgroundColor: "#CC3333" }}
-                >
+                <button className="text-white text-xl font-bold font-sans px-6 py-3 rounded-lg rounded-lg cursor-pointer [background-color:#CC3333] transition hover:bg-white hover:text-[#CC3333] hover:border-[#CC3333] hover:border-1 hover:border-[#CC3333] w-[180px] mt-10">
                   Order Now
                 </button>
               </div>
@@ -464,22 +461,16 @@ export default function Page() {
 
               {/* Right Side */}
               <div className="w-[580px]">
-                <ul className="flex flex-row items-center justify-between gap-18 p-2">
-                  <li>
-                    <a href="#">All Items</a>
-                  </li>
-                  <li>
-                    <a href="#">Pizza</a>
-                  </li>
-                  <li>
-                    <a href="#">Burger</a>
-                  </li>
-                  <li>
-                    <a href="#">Chicken</a>
-                  </li>
-                  <li>
-                    <a href="#">Drinks</a>
-                  </li>
+                <ul className="flex flex-row items-center justify-between gap-2 p-2 text-[#2a435d]">
+                  {["Items", "Pizza", "Burger", "Chicken", "Drinks"].map(
+                    (item) => (
+                      <li key={item}>
+                        <button className="cursor-pointer text-lg focus:bg-[#CC3333] p-2 px-8 rounded-lg focus:text-white">
+                          {item}
+                        </button>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
@@ -532,8 +523,8 @@ export default function Page() {
                 <h1 className="pt-2 text-4xl font-black">Buzzed Burger</h1>
                 <p className="text-sm pt-2">Sales off 50% only this week</p>
                 <button
-                  className="uppercase text-white text-lg font-semibold font-sans py-2 rounded-lg hover:bg-red-500 transition w-[140px] mt-10"
-                  style={{ backgroundColor: "#CC3333" }}
+                  className="uppercase bg-[#CC3333] text-white text-lg font-semibold font-sans py-2 rounded-lg hover:bg-red-500 transition w-[140px] mt-10"
+                  
                 >
                   Order Now
                 </button>
@@ -569,7 +560,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="bg-red-500 row-span-2 text-white">
+            <div className="bg-[#CC3333] row-span-2 text-white">
               <div className="p-4">
                 <h1 className="text-2xl font-bold pt-4">Super Combo Burger</h1>
                 <button
@@ -672,7 +663,7 @@ export default function Page() {
                 <span className="pl-5 text-yellow-500">FOOD</span>
               </h1>
               <p className="py-8">Feel Hunger! Order Your Favourite Food.</p>
-              <button className="bg-red-700 text-white text-xl font-medium rounded-lg p-3">
+              <button className="bg-[#CC3333] text-white text-xl font-medium rounded-lg p-3 rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000]">
                 Order Now
               </button>
             </div>
@@ -753,32 +744,32 @@ export default function Page() {
 
         <section className="bg-white text-black h-[600px] w-full">
           <div className="text-center w-full p-5">
-              <h3
-                className="text-5xl font-black"
-                style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
+            <h3
+              className="text-5xl font-black"
+              style={{ color: "#CC3333", fontFamily: "Caveat, cursive" }}
+            >
+              Testimonials
+            </h3>{" "}
+            <h1
+              className="text-5xl gap-4 font-extrabold font-sans tracking-wide "
+              style={{ color: "#2a435d" }}
+            >
+              Client{" "}
+              <span
+                className="text-5xl font-extrabold font-sans"
+                style={{ color: "#CC3333" }}
               >
-                Testimonials
-              </h3>{" "}
-              <h1
-                className="text-5xl gap-4 font-extrabold font-sans tracking-wide "
-                style={{ color: "#2a435d" }}
-              >
-                Client{" "}
-                <span
-                  className="text-5xl font-extrabold font-sans"
-                  style={{ color: "#CC3333" }}
-                >
-                  Feedback
-                </span>
-              </h1>
-            </div>
-            <div>
-              <Testimonial/>
-            </div>
+                Feedback
+              </span>
+            </h1>
+          </div>
+          <div>
+            <Testimonial />
+          </div>
         </section>
 
         <section className="bg-white h-[280px]">
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 overflow-x-hidden">
             <img src="/images/home/r1.jpg" alt="image" />
             <img src="/images/home/r2.jpg" alt="image" />
             <img src="/images/home/r3.jpg" alt="image" />
@@ -793,10 +784,9 @@ export default function Page() {
               <img src="/images/home/delivery.png" alt="image" />
             </div>
 
-
             <div className="w-[50%]">
               <h3
-                className="text-5xl font-black"
+                className="text-5xl font-black pb-4"
                 style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
               >
                 Delivery
@@ -808,70 +798,141 @@ export default function Page() {
                 A Moments of Delivered <br />{" "}
                 <span style={{ color: "#CC3333" }}>On Right Time & Place</span>
               </h1>
-              <p className="pt-6"
-              style={{ color: "#2a435d" }}
-              >
+              <p className="pt-6" style={{ color: "#2a435d" }}>
                 Food Khan is a restaurant, bar and coffee roastery located on a
                 busy corner site in Farringdon's Exmouth Market. With glazed
                 frontage on two sides of the building, overlooking the market
                 and a bustling London inteon.
               </p>
-               <div>
-                  <div className=" flex items-center gap-4 my-8">
-                    <img
-                      src="/images/home/scooter.png"
-                      alt="phone"
-                      className="w-20 h-20"
-                    />
-                    <div>
-                      <h3 className="text-xl font-semibold font-sans text-white "
-                      style={{ color: "#2a435d" }}  
-                      >
-                        Daily Order Num.
-                      </h3>
-                      <p className="font-bold text-3xl "
+              <div>
+                <div className=" flex items-center gap-4 my-8">
+                  <img
+                    src="/images/home/scooter.png"
+                    alt="phone"
+                    className="w-20 h-20"
+                  />
+                  <div>
+                    <h3
+                      className="text-xl font-semibold font-sans text-white "
+                      style={{ color: "#2a435d" }}
+                    >
+                      Daily Order Num.
+                    </h3>
+                    <p
+                      className="font-bold text-3xl "
                       style={{ color: "#CC3333" }}
-                      >
-                        123-5662546
-                      </p>
-                    </div>
+                    >
+                      123-5662546
+                    </p>
+                  </div>
 
-                    <div>
-                      <button
-                        className="ml-4 text-xl text-white font-sans py-3 rounded-lg hover:bg-red-500 transition w-[150px]"
-                        style={{ backgroundColor: "#CC3333" }}
-                      >
-                        Order Now
-                      </button>
-                    </div>
+                  <div>
+                    <button className="ml-4 text-xl text-white font-sans py-3 rounded-lg rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000] w-[150px]">
+                      Order Now
+                    </button>
                   </div>
                 </div>
+              </div>
             </div>
-
-
           </div>
         </section>
 
-        <section className="bg-white h-[880px]">
-          <div>
-            {/* first */}
-            <div className="py-20 w-full text-center">
-              <h3
-                className="text-4xl font-black"
-                style={{ color: "#CC3333", fontFamily: " 'Caveat', cursive" }}
-              >
-                Food Khan
-              </h3>
-              <h1
-                className="text-5xl font-black font-sans tracking-wide mt-2"
-                style={{ color: "#2a435d" }}
-              >
-                Blog & <span style={{ color: "#CC3333" }}>News</span>
-              </h1>
-            </div>
-            {/* second */}
-            <div>
+        <section className="bg-white py-20 h-[800px]">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-black text-[#CC3333] font-[Caveat]">
+              Food Khan
+            </h3>
+            <h1 className="text-5xl font-black font-sans tracking-wide mt-2 text-[#2a435d]">
+              Blog & <span className="text-[#CC3333]">News</span>
+            </h1>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-10 ">
+            {/* Blog Card 1 */}
+            <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+              <img
+                src="/images/home/b-1.jpg"
+                alt="Burger"
+                className="w-full h-80 rounded-xl object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+              />
+              <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                <p className="text-lg font-bold">02</p>
+                <p className="text-sm">Dec</p>
+              </div>
+              <div className="p-4">
+                <div className="flex flex-row items-center gap-30 mb-2 text-[#2a435d] font-bold ">
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaTags />
+                    Chicken Burger
+                  </span>
+
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaUserCircle />
+                    Milone Hridoy
+                  </span>
+                </div>
+                <h2 className="text-3xl font-black pt-4">
+                  Game Day Burger With Homemade
+                </h2>
+              </div>
+            </div>
+
+            {/* Blog Card 2 */}
+            <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+              <img
+                src="/images/home/b-2.jpg"
+                alt="Burger"
+                className="w-full h-80 rounded-xl cursor-pointer object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+              />
+              <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                <p className="text-lg font-bold">02</p>
+                <p className="text-sm">Dec</p>
+              </div>
+              <div className="p-4">
+                <div className="flex flex-row items-center gap-50 mb-2 text-[#2a435d] font-bold ">
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaTags />
+                    Pizza
+                  </span>
+
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaUserCircle />
+                    Milone Hridoy
+                  </span>
+                </div>
+                <h2 className="text-3xl font-black pt-4">
+                  Game Day Burger With Homemade
+                </h2>
+              </div>
+            </div>
+
+            {/* Blog Card 3 */}
+            <div className="relative rounded-lg overflow-hidden text-[#2a435d]">
+              <img
+                src="/images/home/b-3.jpg"
+                alt="Burger"
+                className="w-full h-80 rounded-xl object-cover transition-transform duration-500 ease-in-out transform hover:scale-110 rounded-xl"
+              />
+              <div className="absolute top-3 right-3 bg-[#CC3333] text-white px-3 py-1 rounded">
+                <p className="text-lg font-bold">02</p>
+                <p className="text-sm">Dec</p>
+              </div>
+              <div className="p-4">
+                <div className="flex flex-row items-center gap-30 mb-2 text-[#2a435d] font-bold ">
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaTags />
+                    Chicken Burger
+                  </span>
+
+                  <span className="flex flex-row items-center  gap-2">
+                    <FaUserCircle />
+                    Milone Hridoy
+                  </span>
+                </div>
+                <h2 className="text-3xl font-black pt-4">
+                  Game Day Burger With Homemade
+                </h2>
+              </div>
             </div>
           </div>
         </section>
