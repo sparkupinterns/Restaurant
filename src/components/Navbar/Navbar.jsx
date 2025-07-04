@@ -26,9 +26,6 @@ export default function Home() {
           <li className="flex items-center gap-1">
             <Link href="/blog">BLOG</Link>
           </li>
-          <li className="flex items-center gap-1">
-            <Link href="/page">PAGES</Link>
-          </li>
           <li>
             <Link href="/contact">CONTACT US</Link>
           </li>
@@ -42,10 +39,12 @@ export default function Home() {
           <IoMdContact />
           <FaShoppingCart />
         </div>
-        <div className="btn ">
-          <button className="px-4 py-2 bg-red-700 text-white rounded hover:bg-red-500 transition h-[52px] w-[129px]">
+        <div>
+          <Link href="/login">
+          <button className="px-4 py-2 text-white rounded hover:bg-red-500 transition h-[52px] w-[129px]" style={{ backgroundColor: "#CC3333" }}>
             Login
           </button>
+          </Link>
         </div>
       </div>
     </div>

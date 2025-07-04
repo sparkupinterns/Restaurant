@@ -30,7 +30,7 @@ export default function Page() {
                   <div className="border border-dotted border-r-0 p-3 rounded-l-xl">
                     Buy One. Get One
                   </div>
-                  <div className="bg-red-600 p-3 text-white font-semibold font-sans ">
+                  <div className="p-3 text-white font-semibold font-sans" style={{ backgroundColor: "#CC3333" }}>
                     Free
                   </div>
                 </div>
@@ -854,6 +854,7 @@ export default function Page() {
 
         <section className="bg-white h-[880px]">
           <div>
+            {/* first */}
             <div className="py-20 w-full text-center">
               <h3
                 className="text-4xl font-black"
@@ -867,6 +868,10 @@ export default function Page() {
               >
                 Blog & <span style={{ color: "#CC3333" }}>News</span>
               </h1>
+            </div>
+            {/* second */}
+            <div>
+
             </div>
           </div>
         </section>

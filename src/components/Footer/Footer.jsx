@@ -26,9 +26,9 @@ export default function Footer() {
                 <div className="px-8">
                     <h1 className="text-3xl font-bold pb-6"> Newsletter</h1>
                     <input type="email" placeholder="Enter Your Email" className="text-lg pb-8  "/>
-                    <button>
+                    {/* <button>
                         <img src="" alt="" />
-                    </button>
+                    </button> */}
                     <h4 className="text-2xl text-yellow-500">Subscribe Now</h4>
                 </div>
             </div>
