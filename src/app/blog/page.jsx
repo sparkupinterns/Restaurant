@@ -57,12 +57,12 @@ const Page = () => {
 
   return (
     <div>
-      <section className="box-border flex flex-col text-black items-center bg-white justify-center py-20 gap-4">
+      <section className="bg-[#131313] text-white flex flex-col items-center justify-center py-20 gap-4 bg-[url('/images/about/transparent1.png')] bg-fit bg-center">
         <h1 className="text-4xl font-black">Blog</h1>
-        <h3 className="font-bold">Home / Pages / Blog</h3>
+        <h3 className="font-bold">Home / Page / Blog Pages</h3>
       </section>
 
-      <section className="bg-white p-6 px-25 flex">
+      <section className="bg-white p-6 px-25 flex py-20">
         {/* LEFT side */}
         <div className="w-[75%] border-gray-500">
           {[1, 2, 3].map((_, idx) => (
@@ -90,8 +90,7 @@ const Page = () => {
                 are being developed, and consumer behaviors are evolving.
               </p>
               <button
-                className="text-white text-xl font-bold font-sans px-6 py-3 rounded-lg hover:bg-red-500 transition w-[180px] mt-10"
-                style={{ backgroundColor: "#2a435d" }}
+                className="text-white cursor-pointer text-xl bg-[#2a435d] font-bold font-sans px-6 py-3 rounded-lg w-[180px] mt-10 border-1 border-transparent hover:bg-white transition hover:text-[#2a435d] hover:border-[#2a425d]"
               >
                 Read More
               </button>
@@ -189,12 +188,12 @@ const Page = () => {
             </ul>
           </div>
 
-          <div className="bg-red-500 border border-gray-300 rounded-lg p-4 relative overflow-hidden">
+          <div className="bg-[#CC3333] border border-gray-300 rounded-lg p-4 relative overflow-hidden">
             <div className="">
               <h1 className="text-2xl font-bold pt-2 text-white">
                 Super Combo Burger
               </h1>
-              <button className="uppercase text-red-500 bg-white text-lg font-semibold font-sans py-2 rounded-lg hover:transition w-[140px] mt-6">
+              <button className="uppercase text-red-500 cursor-pointer bg-white text-lg font-semibold font-sans py-2 rounded-lg w-[140px] mt-6 border-1 border-transparent hover:bg-[#CC3333] transition hover:text-[#CC3333] hover:border-white hover:text-white">
                 Order Now
               </button>
             </div>

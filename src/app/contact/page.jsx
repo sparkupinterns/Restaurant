@@ -1,15 +1,21 @@
 // "use client";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 // import "leaflet/dist/leaflet.css";
+"use client";
+
+import dynamic from "next/dynamic";
 
 const page = () => {
+  const Map = dynamic(() => import("../../components/Map"), {
+    ssr: false,
+  });
   return (
     <>
       <div>
-        <section className="box-border flex flex-col text-black items-center bg-white justify-center py-20 gap-4">
-          <h1 className="text-4xl font-black">Contact</h1>
-          <h3 className="font-bold">Home / Contact Us</h3>
-        </section>
+        <section className="bg-[#131313] text-white flex flex-col items-center justify-center py-20 gap-4 bg-[url('/images/about/transparent1.png')] bg-fit bg-center">
+        <h1 className="text-4xl font-black">Contact</h1>
+        <h3 className="font-bold text-lg">Contact Us Page</h3>
+      </section>
 
         <section className="bg-gray-100 flex flex-row px-10 py-15">
           <div className="flex flex-col gap-4 w-[60%] pl-10">
@@ -115,23 +121,11 @@ const page = () => {
           </div>
         </section>
 
-        {/* <section className="bg-white ">
-          <div className="w-[1300px] h-[500px] p-10  mx-auto">
-            <MapContainer
-              center={[28.6139, 77.209]}
-              zoom={13}
-              className="h-full w-full rounded-lg shadow-lg"
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={[28.6139, 77.209]}>
-                <Popup>Delhi, India</Popup>
-              </Marker>
-            </MapContainer>
+        <section className="bg-white ">
+          <div className="w-[1300px] h-[500px] p-10 mx-auto">
+            <Map />
           </div>
-        </section> */}
+        </section>
       </div>
     </>
   );

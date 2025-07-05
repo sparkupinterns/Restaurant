@@ -1,13 +1,18 @@
 export default function Footer() {
   return (
-    <div className="bg-black w-full">
+    <div className="relative bg-black w-full bg-[url('/images/about/transparent1.png')]">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row justify-between items-center p-8 px-10">
-        <img src="/images/home/logo.png" alt="Khadyo Logo" className="h-16 w-auto mb-6 md:mb-0" />
+        <img
+          src="/images/home/logo.png"
+          alt="Khadyo Logo"
+          className="h-16 w-auto mb-6 md:mb-0 z-10 pl-10"
+        />
         <h1 className="text-3xl md:text-4xl font-semibold text-center md:text-left text-white">
-          Feel Hunger! Order Your <span className="text-yellow-500">Like Food</span>
+          Feel Hunger! Order Your{" "}
+          <span className="text-yellow-500">Like Food</span>
         </h1>
-        <button className="bg-[#CC3333] text-white text-xl font-medium rounded-lg px-10 py-3 cursor-pointer transition hover:bg-[#990000] mt-6 md:mt-0">
+        <button className="bg-[#CC3333] text-white text-xl font-medium rounded-lg px-10 py-3 cursor-pointer mt-6 md:mt-0 border-1 border-transparent hover:bg-black transition hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]">
           Order Now
         </button>
       </div>
@@ -21,7 +26,9 @@ export default function Footer() {
           <p className="text-lg pb-4">
             570 8th Ave, New York, NY 10018 <br /> United States
           </p>
-          <h4 className="text-xl text-yellow-500 cursor-pointer">View Google Map</h4>
+          <h4 className="text-xl text-yellow-500 cursor-pointer">
+            View Google Map
+          </h4>
         </div>
 
         <div>
@@ -29,7 +36,9 @@ export default function Footer() {
           <p className="text-lg pb-4">
             Dogfood och Sliders foodtruck. Under Om oss kan ni läsa
           </p>
-          <h4 className="text-xl text-yellow-500 cursor-pointer">Make a call</h4>
+          <h4 className="text-xl text-yellow-500 cursor-pointer">
+            Make a call
+          </h4>
         </div>
 
         <div>
@@ -37,7 +46,9 @@ export default function Footer() {
           <p className="text-lg pb-4">
             Monday-Friday: 8am - 4pm <br /> Saturday: 9am - 5pm
           </p>
-          <h4 className="text-xl text-yellow-500 cursor-pointer">Make a call</h4>
+          <h4 className="text-xl text-yellow-500 cursor-pointer">
+            Make a call
+          </h4>
         </div>
 
         <div>
@@ -47,7 +58,9 @@ export default function Footer() {
             placeholder="Enter Your Email"
             className="p-3 rounded-lg text-black mb-4 placeholder-gray-500 w-50 border border-white"
           />
-          <h4 className="text-xl text-yellow-500 cursor-pointer">Subscribe Now</h4>
+          <h4 className="text-xl text-yellow-500 cursor-pointer">
+            Subscribe Now
+          </h4>
         </div>
       </div>
 
@@ -56,6 +69,10 @@ export default function Footer() {
         <p>
           Copyright @ 2021 <span className="text-yellow-500">Khadyo</span>
         </p>
+      </div>
+
+      <div className="absolute top-0">
+        <img src="/images/g2.png" alt="image" className="h-[100px] w-[150px]" />
       </div>
     </div>
   );

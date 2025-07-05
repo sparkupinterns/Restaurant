@@ -1,27 +1,26 @@
 "use client";
 import Head from "next/head";
 import Testimonial from "../components/Testimonial";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaTags } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
 
 export default function Page() {
-  const [message, setMessage] = useState("");
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/auth/register")
-      .then((res) => setMessage(res.data.message))
-      .catch((err) => console.log(err));
-  }, []);
+ 
   return (
     <>
-      <div className="">
-        <section className="h-[750px] text-white bg-black box-sizing: border-box">
-          <div className="grid grid-cols-2 items-center justify-center gap-10 mt-10 ">
-            <div className="flex flex-col text-2xl items-center mt-25 justify-between ">
+      <div>
+        <section className="h-[770px] text-white bg-[#131313] box-sizing:border-box bg-[url('/images/about/transparent1.png')] bg-cover bg-left">
+          <div className="grid grid-cols-2 items-center justify-center gap-10 pt-10">
+
+
+            <div className="flex flex-col text-2xl items-center mt-25 justify-between relative">
               <div>
-                <div className="text-5xl gap-4 text-white font-extrabold font-sans tracking-wide h-[100px] w-[456px] mb-8 ">
+                <img src="/images/anim/7.png" alt="image" className="absolute left-10 top-[-100] h-20"/>
+                <img src="/images/anim/41.png" alt="image" className="absolute left-0 bottom-[-100] h-20"/>
+              </div>
+              <div>
+                <div className="leading-16 text-5xl gap-4 text-white font-extrabold font-sans tracking-wide h-[120px] w-[456px] mb-8 ">
                   ENJOY OUR DELICIOUS{" "}
                   <span className="text-5xl text-yellow-500 font-extraibold font-sans">
                     FOOD
@@ -33,8 +32,7 @@ export default function Page() {
                     Buy One. Get One
                   </div>
                   <div
-                    className="p-3 text-white font-semibold font-sans rounded-r-lg"
-                    style={{ backgroundColor: "#CC3333" }}
+                    className="p-3 text-white bg-[#CC3333] font-semibold font-sans rounded-r-lg border-1 border-transparent hover:bg-[#131313] transition hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]"
                   >
                     Free
                   </div>
@@ -50,7 +48,7 @@ export default function Page() {
                 </div>
 
                 <div>
-                  <div className=" flex items-center gap-4 my-8">
+                  <div className="flex flex-row items-center gap-6 my-8">
                     <img
                       src="/images/home/scooter.png"
                       alt="phone"
@@ -66,27 +64,41 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <button className="text-white font-sans px-6 py-3 cursor-pointer rounded-lg [background-color:#CC3333] transition w-[200px] hover:[background-color:#990000]">
+                      <button className="text-white bg-[#CC3333] font-sans px-6 py-3 cursor-pointer rounded-lg w-[200px] border-1 border-transparent rounded-lg hover:bg-[#131313] transition hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]">
                         Try it Now
                       </button>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="h-[450px] flex-shrink-0">
+            <div className="h-[450px] flex-shrink-0 relative">
               <img
                 src="/images/home/pizza.png"
                 alt="Pizza"
-                className="ml-10 mt-10"
+                className="ml-8"
               />
+              <div>
+              <img src="/images/anim/4.png" alt="image" className="absolute top-[-30] right-30"/>
+              <img src="/images/anim/8.png" alt="image" className="absolute left-[-60] bottom-0"/>
+              <img src="/images/anim/21.png" alt="image" className="absolute left-[-10] bottom-[-180] h-18"/>
             </div>
+            </div>
+            
           </div>
         </section>
 
         <section className="bg-gray-100 h-[436px] w-full text-black p-4">
-          <div className="mt-[-50px] items-center justify-center flex flex-col rounded-lg w-[1300px] h-[400px] mx-auto bg-white">
+          <div className="mt-[-50px] items-center justify-center flex flex-col rounded-lg w-[1300px] h-[400px] mx-auto bg-white relative">
+            <div>
+              <img src="/images/anim/72.png" alt="image" className="absolute top-0 right-0"/>
+              <img src="/images/anim/42.png" alt="image" className="absolute right-0 bottom-0"/>
+              <img src="/images/anim/91.png" alt="image" className="absolute bottom-0 left-140"/>
+              <img src="/images/anim/2.png" alt="image" className="absolute top-10 left-10"/>
+              <img src="/images/anim/5.png" alt="image" className="absolute bottom-0 left-0"/>
+            </div>
             <div className="my-5 mt-0 pt-0 p-5 pb-20">
             <h3
               className="text-5xl font-black text-center"
@@ -137,7 +149,7 @@ export default function Page() {
             </div>
 
             <div className="items-center">
-              <button className="text-white font-sans px-6 py-4 rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000] w-[200px]">
+              <button className="text-white bg-[#CC3333] font-sans px-6 py-4 rounded-lg cursor-pointer w-[200px] border-1 border-transparent hover:bg-white transition hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]">
                 Find Table
               </button>
             </div>
@@ -148,7 +160,11 @@ export default function Page() {
         <section className="bg-gray-100 w-full text-black flex items-center justify-center p-4 h-[727px]">
           <div className="flex w-[1320px] ">
             {/* Left Side */}
-            <div className="flex flex-col gap-4 w-[50%] pl-10">
+            <div className="flex flex-col gap-4 w-[50%] pl-10 relative" >
+              <div>
+              <img src="/images/anim/2.png" alt="image" className="absolute bottom-12 right-30"/>
+              {/* <img src="/images/anim/1.png" alt="image" className="absolute right-0 bottom-70"/> */}
+            </div>
               <div className="flex gap-4">
                 <img
                   src="/images/home/1.jpg"
@@ -184,7 +200,11 @@ export default function Page() {
             </div>
 
             {/* Right Side */}
-            <div className="w-[50%] flex flex-col justify-center font-sans">
+            <div className="w-[50%] flex flex-col justify-center font-sans relative">
+              <div>
+              <img src="/images/anim/2.png" alt="image" className="absolute top-0 right-0"/>
+              <img src="/images/anim/1.png" alt="image" className="absolute right-0 bottom-70"/>
+            </div>
               <h1
                 className="text-5xl font-black leading-snug"
                 style={{ color: "#2a435d" }}
@@ -312,7 +332,13 @@ export default function Page() {
               </button>
             </div>
             {/* Menu Section */}
-            <div className="h-[600px] w-[1250px] m-auto my-10 shadow-xl rounded-sm flex flex-col items-center justify-center">
+            <div className="h-[600px] w-[1250px] m-auto my-10 shadow-xl rounded-sm flex flex-col items-center justify-center relative">
+              <div>
+              <img src="/images/anim/2.png" alt="image" className="absolute top-0 right-0"/>
+              <img src="/images/anim/72.png" alt="image" className="absolute right-130 bottom-70 h-30"/>
+              {/* <img src="/images/anim/12.png" alt="image" className="absolute right-130 bottom-70 h-30"/> */}
+              {/* <img src="/images/anim/17.png" alt="image" className="absolute right-130 bottom-70 h-30"/> */}
+            </div>
               <div className="grid grid-cols-3 gap-12 p-4">
                 <div className="flex items-center gap-4 border border-gray-200 rounded-lg p-4 shadow-sm w-[380px] h-[170px] cursor-pointer hover:bg-white transition shadow-lg">
                   <img
@@ -523,7 +549,7 @@ export default function Page() {
                 <h1 className="pt-2 text-4xl font-black">Buzzed Burger</h1>
                 <p className="text-sm pt-2">Sales off 50% only this week</p>
                 <button
-                  className="uppercase bg-[#CC3333] text-white text-lg font-semibold font-sans py-2 rounded-lg hover:bg-red-500 transition w-[140px] mt-10"
+                  className="uppercase bg-[#CC3333] text-white text-lg cursor-pointer font-semibold font-sans py-2 rounded-lg border-1 border-transparent rounded-lg hover:bg-black transition w-[140px] mt-10 hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]"
                   
                 >
                   Order Now
@@ -564,8 +590,7 @@ export default function Page() {
               <div className="p-4">
                 <h1 className="text-2xl font-bold pt-4">Super Combo Burger</h1>
                 <button
-                  className="uppercase text-red-500 bg-white text-lg font-semibold font-sans py-2 rounded-lg hover:transition w-[140px] mt-6"
-                  // style={{ backgroundColor: "#CC3333" }}
+                  className="uppercase text-red-500 bg-white text-lg cursor-pointer font-semibold font-sans py-2 rounded-lg w-[140px] mt-6 border-1 border-transparent rounded-lg hover:bg-[#CC3333] transition hover:text-white hover:border-white "
                 >
                   Order Now
                 </button>
@@ -640,9 +665,9 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-black h-[850px]">
-          <div className="flex flex-row itemes-center ">
-            <div className="flex items-center justify-center mt-8 ml-8">
+        <section className="bg-black h-[900px] bg-[url('/images/about/transparent1.png')] bg-cover bg-left">
+          <div className="flex flex-row items-center ">
+            <div className="flex items-center justify-center mt-10 ml-8">
               <img
                 src="/images/home/21.png"
                 alt="Image"
@@ -657,13 +682,13 @@ export default function Page() {
               >
                 Coming Soon
               </h3>
-              <h1 className="text-5xl font-black items-center leading-normal">
+              <h1 className="text-5xl text-white font-black items-center leading-normal">
                 SPICY CHICKEN <br />
                 PIZZA
                 <span className="pl-5 text-yellow-500">FOOD</span>
               </h1>
-              <p className="py-8">Feel Hunger! Order Your Favourite Food.</p>
-              <button className="bg-[#CC3333] text-white text-xl font-medium rounded-lg p-3 rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000]">
+              <p className="py-8 text-white">Feel Hunger! Order Your Favourite Food.</p>
+              <button className="bg-[#CC3333] text-white text-xl font-medium p-3 rounded-lg cursor-pointer w-[200px] border-1 border-transparent hover:bg-black transition hover:text-[#CC3333] hover:border-white hover:text-white">
                 Order Now
               </button>
             </div>
@@ -827,7 +852,7 @@ export default function Page() {
                   </div>
 
                   <div>
-                    <button className="ml-4 text-xl text-white font-sans py-3 rounded-lg rounded-lg cursor-pointer [background-color:#CC3333] transition hover:[background-color:#990000] w-[150px]">
+                    <button className="ml-4 text-xl bg-[#CC3333] text-white font-sans py-3 rounded-lg cursor-pointer w-[150px] border-1 border-transparent hover:bg-[#FFF2E0] transition hover:text-[#CC3333] hover:border-[#CC3333] hover:text-[#CC3333]">
                       Order Now
                     </button>
                   </div>
