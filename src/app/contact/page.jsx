@@ -1,6 +1,6 @@
-"use client";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+// "use client";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import "leaflet/dist/leaflet.css";
 
 const page = () => {
   return (
@@ -115,7 +115,7 @@ const page = () => {
           </div>
         </section>
 
-        <section className="bg-white ">
+        {/* <section className="bg-white ">
           <div className="w-[1300px] h-[500px] p-10  mx-auto">
             <MapContainer
               center={[28.6139, 77.209]}
@@ -131,7 +131,7 @@ const page = () => {
               </Marker>
             </MapContainer>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );
